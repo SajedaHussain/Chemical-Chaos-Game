@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Orbitron:wght@400;700;900&family=Press+Start+2P&family=Audiowide&display=swap');
+
 * {
     box-sizing: border-box;
     
@@ -6,7 +8,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('https://i.pinimg.com/736x/d2/d3/ed/d2d3ed1e530410f963119ebfa614c15b.jpg');
+    background-image: url('https://copilot.microsoft.com/th/id/BCO.58e8c472-74c3-4b33-bd76-3de6c0019362.png');
+    background-position: center;
+    background-size: cover;
     color: white;
     text-align: center;
     height: 100vh;
@@ -27,7 +31,6 @@ body {
 }
 
 #instructions-screen {
-       
     background-size: cover;
     background-position: center;
     max-width: 600px;
@@ -64,9 +67,6 @@ body {
     margin: 10px;
     transition: all 0.3s;
 }
-#instructions-start-btn:hover, #start-btn:hover {
-    transform: translateY(-3px);
-}
 
 /* Game Screen Layout */
 #game-screen {
@@ -97,6 +97,15 @@ body {
     min-width: 120px;
 }
 
+
+#pengu {
+    position: absolute;
+    top:240px;   /* تحت */
+    left: 800px;    /* يمين */
+    width: 120px !important;
+    height: auto !important;
+}
+
 #question-display {
     font-size: 28px;
     background: rgba(255, 255, 255, 0.15);
@@ -118,14 +127,16 @@ body {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    margin: 20px auto;
+    margin-right:250px;   
     background: rgba(255, 255, 255, 0.1);
 }
 
 #options-container {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
+
+    
 }
 
 #options-container button {
@@ -198,7 +209,49 @@ button {
     cursor: pointer;
 }
 
-#periodicTable{
-    width: 100px;
-    height: 15px;
+#instructions-screen h1, #start-screen h1 {
+    font-family: 'Bungee', cursive;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 0 #f8f8f8, 6px 6px 0 rgba(127, 200, 222, 0.2);
+    background: linear-gradient(45deg,  #4ecdc4,#066e97c5, #7611dba9, #e30ac6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.btn-16 {
+  border: 1px solid #fff;
+  box-shadow: 0 0 5px #fff, 0 0 5px #fff inset;
+}
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.btn-16:hover {
+ box-shadow: rgba(255,255,255, 1) -1px -1px,  -2px -2px, rgba(255,255,255, 1) -3px -3px, rgba(255,255,255, .9) -4px -4px,
+   rgba(255,255,255,.8) -5px -5px, rgba(255,255,255,.7) -6px -6px, rgba(255,255,255,.6) -7px -7px, rgba(255,255,255,.5) -8px -8px,
+      rgba(255,255,255,.4) -9px -9px, rgba(255,255,255,.3) -10px -10px, rgba(255,255,255,.2) -11px -11px, rgba(255,255,255,.1) -12px -12px;
+}
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-16:active {
+  top: 2px;
 }

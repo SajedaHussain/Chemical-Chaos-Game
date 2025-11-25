@@ -456,7 +456,7 @@ function checkAnswer() {
 
 // Game complete
 function gameComplete() {
-    resultDisplay.textContent = "🎉 Congratulations! You finished all levels!";
+    resultDisplay.textContent = "Congratulations! You finished all levels!";
     levelDisplay.textContent = "Game Completed!";
     questionDisplay.textContent = "";
     optionsContainer.innerHTML = "";
