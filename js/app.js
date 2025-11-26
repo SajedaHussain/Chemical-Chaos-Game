@@ -7,189 +7,189 @@ const game = {
             question: " WATER",
             options: ["H", "O", "C", "N", "Ar"],
             correctAnswer: ["H", "O"],
-            time: 10 //seconds
+            time: 15 //seconds
         },
         {
             level: 2,
             question: " CARBON DIOXIDE",
             options: ["C", "O", "H", "F"],
             correctAnswer: ["C", "O"],
-            time: 10
+            time: 15
         },
         {
             level: 3,
             question: " AMMONIA",
             options: ["N", "H", "O", "Ar"],
             correctAnswer: ["N", "H"],
-            time: 10
+            time: 15
         },
         {
             level: 4,
             question: " METHANE",
             options: ["C", "H", "O", "N"],
             correctAnswer: ["C", "H"],
-            time: 10
+            time: 14
         },
         {
             level: 5,
             question: " SODIUM CHLORIDE",
             options: ["Na", "Cl", "O", "H"],
             correctAnswer: ["Na", "Cl"],
-            time: 9
+            time: 14
         },
         {
             level: 6,
             question: " ZINC CHLORIDE",
             options: ["Zn", "Cl", "O", "H", "C"],
             correctAnswer: ["Zn", "Cl"],
-            time: 9
+            time: 14
         },
         {
             level: 7,
             question: " GLUCOSE",
             options: ["C", "H", "O", "N", "Na"],
             correctAnswer: ["C", "H", "O"],
-            time: 9
+            time: 14
         },
         {
             level: 8,
             question: " TABLE SALT",
             options: ["Na", "Cl", "K", "Ca"],
             correctAnswer: ["Na", "Cl"],
-            time: 9
+            time: 13
         },
         {
             level: 9,
             question: " NITRIC ACID",
             options: ["H", "N", "O", "Cl", "C"],
             correctAnswer: ["H", "N", "O"],
-            time: 8
+            time: 13
         },
         {
             level: 10,
             question: "SULFURIC ACID",
             options: ["H", "S", "O", "N", "F"],
             correctAnswer: ["H", "S", "O"],
-            time: 8
+            time: 13
         },
         {
             level: 11,
             question: "AMMONIUM CHLORIDE",
             options: ["N", "H", "Cl", "O", "S"],
             correctAnswer: ["N", "H", "Cl"],
-            time: 8
+            time: 13
         },
         {
             level: 12,
             question: "ETHANOL",
             options: ["C", "H", "O", "N", "S"],
             correctAnswer: ["C", "H", "O"],
-            time: 8
+            time: 13
         },
         {
             level: 13,
             question: " ACETIC ACID",
             options: ["C", "H", "O", "N", "Cl"],
             correctAnswer: ["C", "H", "O"],
-            time: 8
+            time: 12
         },
         {
             level: 14,
             question: " CALCIUM CARBONATE",
             options: ["Ca", "C", "O", "H", "N"],
             correctAnswer: ["Ca", "C", "O"],
-            time: 8
+            time: 12
         },
         {
             level: 15,
             question: " MAGNESIUM OXIDE",
             options: ["Mg", "O", "H", "C", "N"],
             correctAnswer: ["Mg", "O"],
-            time: 8
+            time: 12
         },
         {
             level: 16,
             question: " POTASSIUM IODIDE",
             options: ["K", "I", "Cl", "Na", "O"],
             correctAnswer: ["K", "I"],
-            time: 8
+            time: 12
         },
         {
             level: 17,
             question: " HYDROGEN PEROXIDE",
             options: ["H", "O", "N", "S", "Cl"],
             correctAnswer: ["H", "O"],
-            time: 8
+            time: 11
         },
         {
             level: 18,
             question: " CARBON MONOXIDE",
             options: ["C", "O", "H", "N", "S"],
             correctAnswer: ["C", "O"],
-            time: 8
+            time: 11
         },
         {
             level: 19,
             question: " CALCIUM CHLORIDE",
             options: ["Ca", "Cl", "O", "H", "C"],
             correctAnswer: ["Ca", "Cl"],
-            time: 8
+            time: 11
         },
         {
             level: 20,
             question: " SODIUM BICARBONATE",
             options: ["Na", "H", "C", "O", "N"],
             correctAnswer: ["Na", "H", "C", "O"],
-            time: 7
+            time: 10
         },
         {
             level: 21,
             question: " AMMONIUM SULFATE",
             options: ["N", "H", "S", "O", "Cl"],
             correctAnswer: ["N", "H", "S", "O"],
-            time: 7
+            time: 10
         },
         {
             level: 22,
             question: " PHOSPHORIC ACID",
             options: ["H", "P", "O", "N", "C"],
             correctAnswer: ["H", "P", "O"],
-            time: 7
+            time: 10
         },
         {
             level: 23,
             question: " CALCIUM SULFATE",
             options: ["Ca", "S", "O", "H", "C"],
             correctAnswer: ["Ca", "S", "O"],
-            time: 7
+            time: 9
         },
         {
             level: 24,
             question: " SODIUM HYDROXIDE",
             options: ["Na", "H", "O", "Cl", "S"],
             correctAnswer: ["Na", "H", "O"],
-            time: 7
+            time: 9
         },
         {
             level: 25,
             question: " POTASSIUM NITRATE",
             options: ["K", "N", "O", "H", "C"],
             correctAnswer: ["K", "N", "O"],
-            time: 7
+            time: 9
         },
         {
             level: 26,
             question: " MAGNESIUM SULFATE",
             options: ["Mg", "S", "O", "H", "N"],
             correctAnswer: ["Mg", "S", "O"],
-            time: 7
+            time: 8
         },
         {
             level: 27,
             question: " HYDROCHLORIC ACID",
             options: ["H", "Cl", "O", "N", "C"],
             correctAnswer: ["H", "Cl"],
-            time: 7
+            time: 8
         },
         {
             level: 28,
@@ -403,12 +403,12 @@ function updateTimerDisplay() {
 function timeUp() {
     resultDisplay.textContent = "⏰ Time's Up! You lost!";
     resultDisplay.style.color = "#f8f7f7ff";
-    loseAudio.play()
-
+    
     document.querySelectorAll('#options-container button').forEach(btn => {
         btn.disabled = true;
     });
-
+    resetButtonEl.classList.remove("hidden");
+    loseAudio.play()
 
 }
 

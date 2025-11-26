@@ -153,16 +153,23 @@ body {
     width: 70px;
     height: 75px;
     font-size: 30px;
-    font-weight:bold ;
+    font-weight:bold;
     position: absolute;
     padding: 15px 25px;
-    background: #6b21f3;
+    background: #35138a;
     color: white;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     transition: all 0.3s;
     
+    box-shadow: 0 0 15px #b889ff, 0 0 30px #8b33ff;
+}
+
+#options-container button:hover {
+    background: #7c3aed;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #cfa8ff, 0 0 40px #a259ff;
 }
 
 #options-container button:hover {
@@ -175,7 +182,9 @@ body {
     cursor: not-allowed;
     transform: none !important;
 }
+/* nnn */
 
+/* nnnn */
 #result {
     font-size: 22px;
     font-weight: bold;
