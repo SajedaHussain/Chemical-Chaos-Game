@@ -11,7 +11,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('https://copilot.microsoft.com/th/id/BCO.58e8c472-74c3-4b33-bd76-3de6c0019362.png');
+    background-image: url('../assets/back.png');
     background-position: center;
     background-size: cover;
     color: white;
@@ -152,7 +152,7 @@ body {
 }
 
 #options-container button {
-    width: 70px;
+    width:250px;
     height: 75px;
     font-size: 30px;
     font-weight:bold;
@@ -316,3 +316,32 @@ button:focus {
     border: 2px solid #8b33ff;
     box-shadow: 0 0 15px #a259ff, 0 0 30px #cfa8ff;
 }
+
+/* تثبيت الموقع للهاتف */
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        transform: scale(0.4);
+        transform-origin: top left;
+        width: 250%;
+        height: 250%;
+    }
+    
+    #instructions-screen, #start-screen, #game-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media only screen and (max-width: 480px) {
+    body {
+        transform: scale(0.35);
+        width: 285%;
+        height: 285%;
+    }
+}
+/* +++++++++++++++++++++++++++++++++++++ */

@@ -2,263 +2,291 @@
 // Game Data
 const game = {
     levels: [
-        {
-            level: 1,
-            question: " WATER",
-            options: ["H", "O", "C", "N", "Ar"],
-            correctAnswer: ["H", "O"],
-            time: 15 //seconds
-        },
-        {
-            level: 2,
-            question: " CARBON DIOXIDE",
-            options: ["C", "O", "H", "F"],
-            correctAnswer: ["C", "O"],
-            time: 15
-        },
-        {
-            level: 3,
-            question: " AMMONIA",
-            options: ["N", "H", "O", "Ar"],
-            correctAnswer: ["N", "H"],
-            time: 15
-        },
-        {
-            level: 4,
-            question: " METHANE",
-            options: ["C", "H", "O", "N"],
-            correctAnswer: ["C", "H"],
-            time: 14
-        },
-        {
-            level: 5,
-            question: " SODIUM CHLORIDE",
-            options: ["Na", "Cl", "O", "H"],
-            correctAnswer: ["Na", "Cl"],
-            time: 14
-        },
-        {
-            level: 6,
-            question: " ZINC CHLORIDE",
-            options: ["Zn", "Cl", "O", "H", "C"],
-            correctAnswer: ["Zn", "Cl"],
-            time: 14
-        },
-        {
-            level: 7,
-            question: " GLUCOSE",
-            options: ["C", "H", "O", "N", "Na"],
-            correctAnswer: ["C", "H", "O"],
-            time: 14
-        },
-        {
-            level: 8,
-            question: " TABLE SALT",
-            options: ["Na", "Cl", "K", "Ca"],
-            correctAnswer: ["Na", "Cl"],
-            time: 13
-        },
-        {
-            level: 9,
-            question: " NITRIC ACID",
-            options: ["H", "N", "O", "Cl", "C"],
-            correctAnswer: ["H", "N", "O"],
-            time: 13
-        },
-        {
-            level: 10,
-            question: "SULFURIC ACID",
-            options: ["H", "S", "O", "N", "F"],
-            correctAnswer: ["H", "S", "O"],
-            time: 13
-        },
-        {
-            level: 11,
-            question: "AMMONIUM CHLORIDE",
-            options: ["N", "H", "Cl", "O", "S"],
-            correctAnswer: ["N", "H", "Cl"],
-            time: 13
-        },
-        {
-            level: 12,
-            question: "ETHANOL",
-            options: ["C", "H", "O", "N", "S"],
-            correctAnswer: ["C", "H", "O"],
-            time: 13
-        },
-        {
-            level: 13,
-            question: " ACETIC ACID",
-            options: ["C", "H", "O", "N", "Cl"],
-            correctAnswer: ["C", "H", "O"],
-            time: 12
-        },
-        {
-            level: 14,
-            question: " CALCIUM CARBONATE",
-            options: ["Ca", "C", "O", "H", "N"],
-            correctAnswer: ["Ca", "C", "O"],
-            time: 12
-        },
-        {
-            level: 15,
-            question: " MAGNESIUM OXIDE",
-            options: ["Mg", "O", "H", "C", "N"],
-            correctAnswer: ["Mg", "O"],
-            time: 12
-        },
-        {
-            level: 16,
-            question: " POTASSIUM IODIDE",
-            options: ["K", "I", "Cl", "Na", "O"],
-            correctAnswer: ["K", "I"],
-            time: 12
-        },
-        {
-            level: 17,
-            question: " HYDROGEN PEROXIDE",
-            options: ["H", "O", "N", "S", "Cl"],
-            correctAnswer: ["H", "O"],
-            time: 11
-        },
-        {
-            level: 18,
-            question: " CARBON MONOXIDE",
-            options: ["C", "O", "H", "N", "S"],
-            correctAnswer: ["C", "O"],
-            time: 11
-        },
-        {
-            level: 19,
-            question: " CALCIUM CHLORIDE",
-            options: ["Ca", "Cl", "O", "H", "C"],
-            correctAnswer: ["Ca", "Cl"],
-            time: 11
-        },
-        {
-            level: 20,
-            question: " SODIUM BICARBONATE",
-            options: ["Na", "H", "C", "O", "N"],
-            correctAnswer: ["Na", "H", "C", "O"],
-            time: 10
-        },
-        {
-            level: 21,
-            question: " AMMONIUM SULFATE",
-            options: ["N", "H", "S", "O", "Cl"],
-            correctAnswer: ["N", "H", "S", "O"],
-            time: 10
-        },
-        {
-            level: 22,
-            question: " PHOSPHORIC ACID",
-            options: ["H", "P", "O", "N", "C"],
-            correctAnswer: ["H", "P", "O"],
-            time: 10
-        },
-        {
-            level: 23,
-            question: " CALCIUM SULFATE",
-            options: ["Ca", "S", "O", "H", "C"],
-            correctAnswer: ["Ca", "S", "O"],
-            time: 9
-        },
-        {
-            level: 24,
-            question: " SODIUM HYDROXIDE",
-            options: ["Na", "H", "O", "Cl", "S"],
-            correctAnswer: ["Na", "H", "O"],
-            time: 9
-        },
-        {
-            level: 25,
-            question: " POTASSIUM NITRATE",
-            options: ["K", "N", "O", "H", "C"],
-            correctAnswer: ["K", "N", "O"],
-            time: 9
-        },
-        {
-            level: 26,
-            question: " MAGNESIUM SULFATE",
-            options: ["Mg", "S", "O", "H", "N"],
-            correctAnswer: ["Mg", "S", "O"],
-            time: 8
-        },
-        {
-            level: 27,
-            question: " HYDROCHLORIC ACID",
-            options: ["H", "Cl", "O", "N", "C"],
-            correctAnswer: ["H", "Cl"],
-            time: 8
-        },
-        {
-            level: 28,
-            question: " POTASSIUM CHLORIDE",
-            options: ["K", "Cl", "Na", "H", "O"],
-            correctAnswer: ["K", "Cl"],
-            time: 7
-        },
-        {
-            level: 29,
-            question: " CALCIUM HYDROXIDE",
-            options: ["Ca", "H", "O", "C", "N"],
-            correctAnswer: ["Ca", "H", "O"],
-            time: 7
-        },
-        {
-            level: 30,
-            question: " ALUMINUM OXIDE",
-            options: ["Al", "O", "H", "C", "N"],
-            correctAnswer: ["Al", "O"],
-            time: 7
-        },
-        {
-            level: 31,
-            question: " SILICON DIOXIDE",
-            options: ["Si", "O", "H", "C", "N"],
-            correctAnswer: ["Si", "O"],
-            time: 7
-        },
-        {
-            level: 32,
-            question: " LITHIUM CHLORIDE",
-            options: ["Li", "Cl", "Na", "O", "H"],
-            correctAnswer: ["Li", "Cl"],
-            time: 6
-        },
-        {
-            level: 33,
-            question: " BORIC ACID",
-            options: ["H", "B", "O", "N", "C"],
-            correctAnswer: ["H", "B", "O"],
-            time: 6
-        },
-        {
-            level: 34,
-            question: " SODIUM NITRATE",
-            options: ["Na", "N", "O", "C", "H"],
-            correctAnswer: ["Na", "N", "O"],
-            time: 6
-        },
-        {
-            level: 35,
-            question: " CALCIUM NITRITE",
-            options: ["Ca", "N", "O", "H", "C"],
-            correctAnswer: ["Ca", "N", "O"],
-            time: 6
-        },
-        {
-            level: 36,
-            question: " IRON OXIDE",
-            options: ["Fe", "O", "H", "C", "S"],
-            correctAnswer: ["Fe", "O"],
-            time: 6
-        },
+  {
+    level: 1,
+    question: "UNIT OPERATION FOR SEPARATION",
+    options: ["Distillation", "Reaction", "Polymerization", "Combustion"],
+    correctAnswer: ["Distillation"],
+    time: 15
+  },
+  {
+    level: 2,
+    question: "HEAT TRANSFER MODES",
+    options: ["Conduction", "Convection", "Radiation", "Diffusion"],
+    correctAnswer: ["Conduction", "Convection", "Radiation"],
+    time: 15
+  },
+  {
+    level: 3,
+    question: "MASS TRANSFER OPERATION",
+    options: ["Absorption", "Crystallization", "Filtration", "Combustion"],
+    correctAnswer: ["Absorption"],
+    time: 14
+  },
+  {
+    level: 4,
+    question: "FLUID FLOW EQUIPMENT",
+    options: ["Pump", "Reactor", "Heat Exchanger", "Column"],
+    correctAnswer: ["Pump"],
+    time: 14
+  },
+  {
+    level: 5,
+    question: "TYPE OF REACTOR",
+    options: ["CSTR", "PFR", "Batch", "Separator"],
+    correctAnswer: ["CSTR", "PFR", "Batch"],
+    time: 14
+  },
+  {
+    level: 6,
+    question: "DISTILLATION COLUMN PART",
+    options: ["Reboiler", "Condenser", "Pump", "Filter"],
+    correctAnswer: ["Reboiler", "Condenser"],
+    time: 13
+  },
+  {
+    level: 7,
+    question: "THERMODYNAMICS PROPERTY",
+    options: ["Enthalpy", "Entropy", "Velocity", "Pressure"],
+    correctAnswer: ["Enthalpy", "Entropy", "Pressure"],
+    time: 13
+  },
+  {
+    level: 8,
+    question: "UNIT FOR PRESSURE",
+    options: ["Pa", "bar", "Joule", "atm"],
+    correctAnswer: ["Pa", "bar", "atm"],
+    time: 13
+  },
+  {
+    level: 9,
+    question: "SEPARATION TECHNIQUE",
+    options: ["Filtration", "Distillation", "Reaction", "Mixing"],
+    correctAnswer: ["Filtration", "Distillation"],
+    time: 12
+  },
+  {
+    level: 10,
+    question: "ENERGY BALANCE USES",
+    options: ["Heat", "Work", "Mass", "Energy"],
+    correctAnswer: ["Heat", "Work", "Energy"],
+    time: 12
+  },
 
+  {
+    level: 11,
+    question: "FLUID PROPERTY",
+    options: ["Viscosity", "Density", "Velocity", "Color"],
+    correctAnswer: ["Viscosity", "Density"],
+    time: 12
+  },
+  {
+    level: 12,
+    question: "HEAT EXCHANGER TYPE",
+    options: ["Shell & Tube", "Plate", "Reactor", "Tank"],
+    correctAnswer: ["Shell & Tube", "Plate"],
+    time: 11
+  },
+  {
+    level: 13,
+    question: "MASS BALANCE BASIS",
+    options: ["Input", "Output", "Generation", "Heat"],
+    correctAnswer: ["Input", "Output", "Generation"],
+    time: 11
+  },
+  {
+    level: 14,
+    question: "FLOW REGIME",
+    options: ["Laminar", "Turbulent", "Static", "Random"],
+    correctAnswer: ["Laminar", "Turbulent"],
+    time: 11
+  },
+  {
+    level: 15,
+    question: "REACTOR DESIGN VARIABLE",
+    options: ["Temperature", "Pressure", "Color", "Residence Time"],
+    correctAnswer: ["Temperature", "Pressure", "Residence Time"],
+    time: 11
+  },
+  {
+    level: 16,
+    question: "PROCESS SAFETY DEVICE",
+    options: ["Relief Valve", "Pump", "Filter", "Reactor"],
+    correctAnswer: ["Relief Valve"],
+    time: 10
+  },
+  {
+    level: 17,
+    question: "THERMODYNAMICS LAW",
+    options: ["First Law", "Second Law", "Ohm’s Law", "Newton’s Law"],
+    correctAnswer: ["First Law", "Second Law"],
+    time: 10
+  },
+  {
+    level: 18,
+    question: "SEPARATION BASED ON SIZE",
+    options: ["Filtration", "Distillation", "Absorption", "Reaction"],
+    correctAnswer: ["Filtration"],
+    time: 10
+  },
+  {
+    level: 19,
+    question: "PROCESS VARIABLE",
+    options: ["Temperature", "Pressure", "Flow Rate", "Color"],
+    correctAnswer: ["Temperature", "Pressure", "Flow Rate"],
+    time: 9
+  },
+  {
+    level: 20,
+    question: "CONTROL SYSTEM ELEMENT",
+    options: ["Sensor", "Controller", "Actuator", "Reactor"],
+    correctAnswer: ["Sensor", "Controller", "Actuator"],
+    time: 9
+  },
 
+  {
+    level: 21,
+    question: "UNIT OPERATION",
+    options: ["Drying", "Mixing", "Reaction", "Cooling"],
+    correctAnswer: ["Drying", "Mixing", "Cooling"],
+    time: 9
+  },
+  {
+    level: 22,
+    question: "FLOW MEASUREMENT DEVICE",
+    options: ["Orifice Meter", "Venturi", "Thermometer", "Pump"],
+    correctAnswer: ["Orifice Meter", "Venturi"],
+    time: 8
+  },
+  {
+    level: 23,
+    question: "REACTION TYPE",
+    options: ["Exothermic", "Endothermic", "Isothermal", "Mechanical"],
+    correctAnswer: ["Exothermic", "Endothermic"],
+    time: 8
+  },
+  {
+    level: 24,
+    question: "CHEMICAL ENGINEERING FIELD",
+    options: ["Petrochemical", "Biochemical", "Mechanical", "Civil"],
+    correctAnswer: ["Petrochemical", "Biochemical"],
+    time: 8
+  },
+  {
+    level: 25,
+    question: "PROCESS ECONOMICS FACTOR",
+    options: ["Cost", "Profit", "Efficiency", "Color"],
+    correctAnswer: ["Cost", "Profit", "Efficiency"],
+    time: 8
+  },
+  {
+    level: 26,
+    question: "HEAT TRANSFER EQUIPMENT",
+    options: ["Heat Exchanger", "Boiler", "Condenser", "Filter"],
+    correctAnswer: ["Heat Exchanger", "Boiler", "Condenser"],
+    time: 7
+  },
+  {
+    level: 27,
+    question: "FLUID FLOW LAW",
+    options: ["Bernoulli", "Newton", "Fourier", "Fick"],
+    correctAnswer: ["Bernoulli"],
+    time: 7
+  },
+  {
+    level: 28,
+    question: "MASS TRANSFER LAW",
+    options: ["Fick", "Fourier", "Ohm", "Bernoulli"],
+    correctAnswer: ["Fick"],
+    time: 7
+  },
+  {
+    level: 29,
+    question: "HEAT TRANSFER LAW",
+    options: ["Fourier", "Fick", "Newton", "Bernoulli"],
+    correctAnswer: ["Fourier"],
+    time: 7
+  },
+  {
+    level: 30,
+    question: "PROCESS CONTROL OBJECTIVE",
+    options: ["Stability", "Safety", "Efficiency", "Decoration"],
+    correctAnswer: ["Stability", "Safety", "Efficiency"],
+    time: 7
+  },
 
+  {
+    level: 31,
+    question: "INDUSTRIAL SECTOR",
+    options: ["Oil & Gas", "Food", "Textile", "Fashion"],
+    correctAnswer: ["Oil & Gas", "Food"],
+    time: 6
+  },
+  {
+    level: 32,
+    question: "ENERGY SOURCE",
+    options: ["Steam", "Electricity", "Solar", "Color"],
+    correctAnswer: ["Steam", "Electricity", "Solar"],
+    time: 6
+  },
+  {
+    level: 33,
+    question: "PROCESS INPUT",
+    options: ["Raw Material", "Energy", "Product", "Waste"],
+    correctAnswer: ["Raw Material", "Energy"],
+    time: 6
+  },
+  {
+    level: 34,
+    question: "PROCESS OUTPUT",
+    options: ["Product", "Waste", "Energy", "Raw Material"],
+    correctAnswer: ["Product", "Waste"],
+    time: 6
+  },
+  {
+    level: 35,
+    question: "CHEMICAL ENGINEER ROLE",
+    options: ["Design", "Operation", "Safety", "Painting"],
+    correctAnswer: ["Design", "Operation", "Safety"],
+    time: 6
+  },
+  {
+    level: 36,
+    question: "RENEWABLE ENERGY",
+    options: ["Solar", "Wind", "Coal", "Gas"],
+    correctAnswer: ["Solar", "Wind"],
+    time: 6
+  },
+  {
+    level: 37,
+    question: "PROCESS SCALE",
+    options: ["Lab", "Pilot", "Industrial", "Home"],
+    correctAnswer: ["Lab", "Pilot", "Industrial"],
+    time: 5
+  },
+  {
+    level: 38,
+    question: "SAFETY HAZARD",
+    options: ["Fire", "Explosion", "Leak", "Decoration"],
+    correctAnswer: ["Fire", "Explosion", "Leak"],
+    time: 5
+  },
+  {
+    level: 39,
+    question: "PROCESS SIMULATION SOFTWARE",
+    options: ["Aspen", "HYSYS", "MATLAB", "Photoshop"],
+    correctAnswer: ["Aspen", "HYSYS"],
+    time: 5
+  },
+  {
+    level: 40,
+    question: "CHEMICAL ENGINEERING SKILL",
+    options: ["Problem Solving", "Teamwork", "Analysis", "Guessing"],
+    correctAnswer: ["Problem Solving", "Teamwork", "Analysis"],
+    time: 5
+  }
+]
 
-    ]
 };
 
 /*---------------------------- Variables (state) ----------------------------*/
