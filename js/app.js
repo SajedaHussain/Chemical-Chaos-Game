@@ -118,7 +118,7 @@ const game = {
   {
     level: 17,
     question: "THERMODYNAMICS LAW",
-    options: ["First Law", "Second Law", "Ohm’s Law", "Newton’s Law"],
+    options: ["First Law", "Second Law", "Ohm's Law", "Newton's Law"],
     correctAnswer: ["First Law", "Second Law"],
     time: 10
   },
@@ -309,9 +309,9 @@ const timerDisplay = document.querySelector("#timer-display");
 const resetButtonEl = document.querySelector("#reset-button");
 const instructionsScreen = document.querySelector("#instructions-screen");
 const instructionsStartBtn = document.querySelector("#instructions-start-btn");
-const gameAudio = new Audio ('../assets/game.mp3')
-const clapAudio = new Audio('../assets/clap.wav')
-const loseAudio = new Audio('../assets/lose.wav')
+const gameAudio = new Audio('./assets/game.mp3')
+const clapAudio = new Audio('./assets/clap.wav')
+const loseAudio = new Audio('./assets/lose.wav')
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -330,8 +330,8 @@ function resetGame() {
     resetButtonEl.classList.add("hidden");
     nextLevelBtn.classList.add("hidden");
     gameScreen.classList.add("hidden");
-    startScreen.classList.remove("hidden");
-    // instructionsScreen.classList.remove("hidden");
+    startScreen.classList.add("hidden");
+    instructionsScreen.classList.remove("hidden");
     resultDisplay.textContent = "";
     if (timerDisplay) timerDisplay.textContent = "";
 }
@@ -349,7 +349,7 @@ function loadLevel() {
     const level = game.levels[currentLevel];
 
     if (!level) {
-        gameComplete();//the goal is when we complete th levels wa can start again
+        gameComplete();
         return;
     }
 
@@ -364,14 +364,14 @@ function loadLevel() {
     // Render Options
     optionsContainer.innerHTML = "";
     level.options.forEach(element => {
-        const btn = document.createElement("button");//creat btn for element
+        const btn = document.createElement("button");
         btn.textContent = element;
 
         btn.addEventListener("click", () => handleChoice(element, btn));
         btn.style.position = "absolute";
 
         optionsContainer.appendChild(btn);
-        animateButton(btn);//for moving part
+        animateButton(btn);
     });
 
     // Start timer
@@ -381,7 +381,7 @@ function loadLevel() {
 // Animation function
 function animateButton(btn) {
     const area = document.getElementById("options-area");
-    const btnWidth = 100;
+    const btnWidth = 200;
     const btnHeight = 60;
 
     const maxX = area.clientWidth - btnWidth;
@@ -427,7 +427,7 @@ function updateTimerDisplay() {
     }
 }
 
-// Time's up - يرجع للريست تلقائياً
+// Time's up
 function timeUp() {
     resultDisplay.textContent = "⏰ Time's Up! You lost!";
     resultDisplay.style.color = "#f8f7f7ff";
@@ -436,8 +436,7 @@ function timeUp() {
         btn.disabled = true;
     });
     resetButtonEl.classList.remove("hidden");
-    loseAudio.play()
-
+    loseAudio.play();
 }
 
 // Handle element choice
@@ -446,14 +445,13 @@ function handleChoice(element, btn) {
         selectedElements.push(element);
         btn.style.backgroundColor = "#ff9800";
         btn.disabled = true;
-        // Stop animation for this button
         btn.style.transform = "none";
     }
 
     checkAnswer();
 }
 
-// Check answer - إذا أجاب خطأ يرجع للريست
+// Check answer
 function checkAnswer() {
     const level = game.levels[currentLevel];
     const correct = level.correctAnswer;
@@ -468,18 +466,16 @@ function checkAnswer() {
         resultDisplay.textContent = "Correct! ✔️";
         resultDisplay.style.color = "#45a348ff";
         nextLevelBtn.classList.remove("hidden");
-        clapAudio.play()
+        clapAudio.play();
 
         document.querySelectorAll('#options-container button').forEach(btn => {
             btn.disabled = true;
-    
         });
     } else if (selectedElements.length >= correct.length) {
         resultDisplay.textContent = "Wrong combination! You lost! ❌";
         resultDisplay.style.color = "#fffbfbff";
         resetButtonEl.classList.remove("hidden");
-        loseAudio.play()
-
+        loseAudio.play();
     }
 }
 
@@ -507,7 +503,7 @@ startBtn.addEventListener("click", () => {
     startScreen.classList.add("hidden");
     gameScreen.classList.remove("hidden");
     currentLevel = 0;
-    gameAudio.play()
+    gameAudio.play();
     loadLevel();
 });
 
